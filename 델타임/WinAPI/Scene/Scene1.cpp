@@ -115,8 +115,9 @@ void Scene1::Update()
     {
         if(!bl[i].isFire)continue;
 
-        bl[i].Pos += bl[i].Dir * DeltaTime * 200.0f;
-        bl[i].Rot += DeltaTime * 15.0f;
+		bl[i].Speed += 300.0f * DeltaTime;
+        bl[i].Pos += bl[i].Dir * bl[i].Speed * DeltaTime;
+        //bl[i].Rot += DeltaTime * 15.0f;
     }
     //cout << g_Mouse.x << ","<< g_Mouse.y <<endl;
     child->Rotation +=0.1f;

@@ -7,12 +7,14 @@ struct BULLET
     Vector2 Dir; //방향
     float   Rot; //공전 회전값
     bool    isFire; //발사했는가?
+	float	Speed;
     BULLET()
     {
         Pos = Vector2(0.0f,0.0f);
         Dir = Vector2(1.0f,0.0f);//0
         isFire = false;
         Rot = 0.0f;
+		Speed = 0.0f;
     }
 };
 
